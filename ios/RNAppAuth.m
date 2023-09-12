@@ -427,8 +427,7 @@ RCT_REMAP_METHOD(logout,
 
         if(externalUserAgent != nil) {
             _currentSession = [OIDAuthState authStateByPresentingAuthorizationRequest:request
-                                                             presentingViewController:presentingViewController
-                                                              prefersEphemeralSession:prefersEphemeralSession
+                                                             externalUserAgent:externalUserAgent
                                                                              callback:callback];
         } else {
             if (@available(iOS 13, *)) {
